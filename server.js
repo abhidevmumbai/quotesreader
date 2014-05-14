@@ -51,8 +51,8 @@ app.get('/api/posts', function(req, res) {
 
 		this.json_data = JSON.parse(data);
 	});
-	console.log(this.json_data);
-	res.json({this.json_data});
+	// console.log(this.json_data);
+	res.json(this.json_data);
 })
 
 

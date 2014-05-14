@@ -8,7 +8,4 @@ quotesReaderControllers.controller('QuotesReaderCtrl', ['$scope', 'Posts',
 	Posts.then(function (response) {
 		$scope.posts = response.data.response.posts;
 	});
-    // Posts.getData().then(function(dataResponse) {
-    //     $scope.posts = dataResponse;
-    // });
 }]);

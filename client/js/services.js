@@ -12,8 +12,17 @@ var quotesReaderServices = angular.module('quotesReaderServices', ['ngResource']
 
 quotesReaderServices.factory('Posts', ['$resource', '$http',
 	function($resource, $http){
-		return $http.get('/api/posts', {'limit'}).
+		// delete $http.defaults.headers.common['X-Requested-With'];
+		return $http.jsonp('http://api.tumblr.com/v2/blog/allanimemangaquotes.tumblr.com/posts',
+			{
+				params: {
+			        callback: 'JSON_CALLBACK',
+			        format:'json',			        
+			        api_key: 'pjKvJTdwNgCVEB0zX1q0ilC0x2PiFGSd7koSVoUFMbCwetlUPf'
+			    }
+			}).
 		        success(function(data) {
+		        	console.log(data);
 		            console.log('Succesfully fetched the Posts');
 		        });
 	}
