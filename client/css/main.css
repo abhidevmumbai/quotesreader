@@ -1,5 +1,7 @@
 .view_container {
-	border: 1px solid #ddd;
+	box-shadow: 0 0px 30px #bbb;
+	-moz-box-shadow: 0 0px 30px #bbb;
+	-webkit-box-shadow: 0 0px 30px #bbb;
 	margin-top: 51px;
 	overflow: hidden;
 }
